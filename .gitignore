@@ -1,6 +1,8 @@
-data/
+data/raw/
 *.nc
 *.hdf
 *.tif
 *.h5
+*.hgt
+*.zip
 .ipynb_checkpoints/
