@@ -1,0 +1,6 @@
+data/
+*.nc
+*.hdf
+*.tif
+*.h5
+.ipynb_checkpoints/
