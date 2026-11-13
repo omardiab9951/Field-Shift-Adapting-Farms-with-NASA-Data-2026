@@ -47,17 +47,17 @@ Why this matters: if you swap them, the box moves to another part of the Delta (
 
 | | Download | Use for yearly numbers and trends |
 |---|---|---|
-| Landsat | 1985 to latest | **1985 to 2025** (full years only) |
-| NASA POWER, GPM, SMAP, Sentinel-2 | 2015 to latest | **2016 to 2025** (full years only) |
+| Landsat | 1985 to 2024 | **1985 to 2024** (full years only) |
+| NASA POWER, GPM, SMAP, Sentinel-2 | 2015 to 2024 | **2016 to 2024** (full years only) |
 | SRTM, FAO GAEZ | One-time maps | No time range. Download once. |
 
-Why not 2015 and 2026 for yearly numbers:
+Why not 2015 and 2025 for yearly numbers:
 
 - 2015 is not complete. SMAP starts on 31 March 2015. Sentinel-2 starts on 4 July 2015.
-- 2026 is not finished yet.
+- 2025 is not complete for GPM. The GPM Final Run (version 07) ends on 30 September 2025.
 
 A yearly average with missing months gives a wrong result.
-You can still use 2015 and 2026 data for monthly plots.
+So every dataset uses the same 9 full years: 2016 to 2024.
 
 ---
 
@@ -157,7 +157,7 @@ All of them are removed with the NDVI rule below.
 | Villages and towns inside the area | Remove them with the rule below |
 | Some fish ponds may be near the north edge | Same rule for Sentinel-2. For SMAP, the anomaly compares the area with itself over time, so a fixed difference cancels out. This only works if the fish ponds did not grow over the years. |
 | Old Landsat years (1985-1999) may have few clear images | Count clear images per year during EDA |
-| GPM Final Run comes out a few months late | The newest months may be missing. Use full years only (see Time range). |
+| GPM Final Run (version 07) ends on 30 September 2025 | Use 2016 to 2024 for every dataset. Never mix GPM version 07 and version 08. |
 
 ### The rule to remove non-farm pixels
 
