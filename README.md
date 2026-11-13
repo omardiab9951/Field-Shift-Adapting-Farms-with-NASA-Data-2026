@@ -1,7 +1,9 @@
-**Team Roles:**
-Omar: Data Work
-Fatma: Data Work
-Mostafa Nabil: Data Work
-Mostafa Abdelhamed: Data Work & Supervision
-Ahmed: Build Demo Website & Scoring System
-Kareem: Test, Presentation & Video Demo.
+## 👥 Team Roles
+
+* **Data & Supervision:**
+  * **Mostafa Abdelhamed:** Data Work & Supervision
+  * **Omar, Fatma, Mostafa Nabil:** Data Work
+* **Development:**
+  * **Ahmed:** Demo Website & Scoring System
+* **QA & Delivery:**
+  * **Kareem:** Testing, Presentation & Video Demo
