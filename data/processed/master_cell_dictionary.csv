@@ -1,0 +1,190 @@
+column,group,unit,description,source,notebook
+cell_id,cell,,"cell number, 1-560",grid,00
+row,cell,,"grid row, 1 = north",grid,00
+col,cell,,"grid column, 1 = west",grid,00
+lat,cell,degrees,latitude of the cell centre,grid,00
+lon,cell,degrees,longitude of the cell centre,grid,00
+farm_pct,cell,0-1,"share of the cell that is farmland, 2017-2024",Sentinel-2,08
+is_farm_cell,cell,yes/no,farm_pct is at least 0.5,Sentinel-2,08
+winter_ndvi,cell,NDVI,mean NDVI December-March,Sentinel-2,08
+summer_ndvi,cell,NDVI,mean NDVI June-August,Sentinel-2,08
+two_seasons,cell,yes/no,both seasons at least 0.5 NDVI,Sentinel-2,08
+spring_gap_month,cell,month,"month with the lowest NDVI, March-June",Sentinel-2,08
+spring_gap_ndvi,cell,NDVI,NDVI in the spring gap month,Sentinel-2,08
+spring_gap_open_pct,cell,%,farmland open in the spring gap month,Sentinel-2,08
+autumn_gap_month,cell,month,"month with the lowest NDVI, August-November",Sentinel-2,08
+autumn_gap_ndvi,cell,NDVI,NDVI in the autumn gap month,Sentinel-2,08
+autumn_gap_open_pct,cell,%,farmland open in the autumn gap month,Sentinel-2,08
+winter_cv,cell,ratio,"year-to-year variation of winter NDVI, 2017-2024",Sentinel-2,08
+summer_cv,cell,ratio,"year-to-year variation of summer NDVI, 2017-2024",Sentinel-2,08
+ls_trend_per_decade,cell,NDVI/decade,"Theil-Sen trend of Feb-Mar NDVI, 1985-2024",Landsat,08
+ls_trend_p,cell,p-value,Mann-Kendall test of that trend,Landsat,08
+ls_trend_q,cell,q-value,trend p-value after false discovery rate correction,Landsat,08
+ls_trend_class,cell,label,improving / stable / declining (q < 0.05),Landsat,08
+ls_n_years,cell,years,years with a Landsat value,Landsat,08
+ls_farm_1985_94,cell,0-1,farmland share 1985-1994,Landsat,08
+ls_farm_2015_24,cell,0-1,farmland share 2015-2024,Landsat,08
+ls_farm_pct_change,cell,0-1,farmland share change; negative = village growth,Landsat,08
+valid_pct_mean,cell,0-1,"average cloud-free share per month, 2017-2024",Sentinel-2,08
+ndvi_missing_months,cell,months,months 2017-2024 with no clear view,Sentinel-2,08
+plant_doy_wheat,crop,day of year,"GAEZ best sowing day (single crop, see 09) for wheat",GAEZ v5,09
+cycle_days_wheat,crop,days,GAEZ length of growth cycle for wheat,GAEZ v5,09
+thermal_wheat,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for wheat,GAEZ v5,09
+irrig_mm_wheat,crop,mm,GAEZ net irrigation need over the cycle for wheat,GAEZ v5,09
+plant_doy_maize,crop,day of year,"GAEZ best sowing day (single crop, see 09) for maize",GAEZ v5,09
+cycle_days_maize,crop,days,GAEZ length of growth cycle for maize,GAEZ v5,09
+thermal_maize,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for maize,GAEZ v5,09
+irrig_mm_maize,crop,mm,GAEZ net irrigation need over the cycle for maize,GAEZ v5,09
+plant_doy_rice,crop,day of year,"GAEZ best sowing day (single crop, see 09) for rice",GAEZ v5,09
+cycle_days_rice,crop,days,GAEZ length of growth cycle for rice,GAEZ v5,09
+thermal_rice,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for rice,GAEZ v5,09
+irrig_mm_rice,crop,mm,GAEZ net irrigation need over the cycle for rice,GAEZ v5,09
+plant_doy_cotton,crop,day of year,"GAEZ best sowing day (single crop, see 09) for cotton",GAEZ v5,09
+cycle_days_cotton,crop,days,GAEZ length of growth cycle for cotton,GAEZ v5,09
+thermal_cotton,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for cotton,GAEZ v5,09
+irrig_mm_cotton,crop,mm,GAEZ net irrigation need over the cycle for cotton,GAEZ v5,09
+plant_doy_alfalfa,crop,day of year,"GAEZ best sowing day (single crop, see 09) for alfalfa",GAEZ v5,09
+cycle_days_alfalfa,crop,days,GAEZ length of growth cycle for alfalfa,GAEZ v5,09
+thermal_alfalfa,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for alfalfa,GAEZ v5,09
+irrig_mm_alfalfa,crop,mm,GAEZ net irrigation need over the cycle for alfalfa,GAEZ v5,09
+plant_doy_sugarbeet,crop,day of year,"GAEZ best sowing day (single crop, see 09) for sugarbeet",GAEZ v5,09
+cycle_days_sugarbeet,crop,days,GAEZ length of growth cycle for sugarbeet,GAEZ v5,09
+thermal_sugarbeet,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for sugarbeet,GAEZ v5,09
+irrig_mm_sugarbeet,crop,mm,GAEZ net irrigation need over the cycle for sugarbeet,GAEZ v5,09
+plant_doy_potato,crop,day of year,"GAEZ best sowing day (single crop, see 09) for potato",GAEZ v5,09
+cycle_days_potato,crop,days,GAEZ length of growth cycle for potato,GAEZ v5,09
+thermal_potato,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for potato,GAEZ v5,09
+irrig_mm_potato,crop,mm,GAEZ net irrigation need over the cycle for potato,GAEZ v5,09
+plant_doy_soybean,crop,day of year,"GAEZ best sowing day (single crop, see 09) for soybean",GAEZ v5,09
+cycle_days_soybean,crop,days,GAEZ length of growth cycle for soybean,GAEZ v5,09
+thermal_soybean,crop,0-10000,GAEZ thermal yield factor (10000 = no loss) for soybean,GAEZ v5,09
+irrig_mm_soybean,crop,mm,GAEZ net irrigation need over the cycle for soybean,GAEZ v5,09
+mci_class,cell,class,GAEZ multi-cropping class with irrigation (8 = triple rice),GAEZ v5,09
+elev_mean_m,cell,m,mean elevation,SRTM,05
+elev_min_m,cell,m,lowest elevation,SRTM,05
+elev_max_m,cell,m,highest elevation,SRTM,05
+soil_overall,cell,0-1,worst soil quality rating (1 = no limit),GAEZ v5,06b
+soil_nutrients,cell,0-1,nutrient availability rating,GAEZ v5,06b
+soil_nutrient_retention,cell,0-1,nutrient retention rating,GAEZ v5,06b
+soil_rooting,cell,0-1,rooting conditions rating,GAEZ v5,06b
+soil_oxygen,cell,0-1,oxygen / drainage rating,GAEZ v5,06b
+soil_salinity,cell,0-1,salinity and sodicity rating,GAEZ v5,06b
+soil_lime_gypsum,cell,0-1,lime and gypsum rating,GAEZ v5,06b
+soil_workability,cell,0-1,workability rating,GAEZ v5,06b
+soil_water_share,cell,0-1,share of soil-map pixels that are water,GAEZ v5,06b
+soil_limit_class,cell,class,"most limiting soil quality, GAEZ class 1-11",GAEZ v5,06b
+soil_limit_name,cell,label,"most limiting soil quality, in words",GAEZ v5,06b
+gaez_slope_flat_pct,cell,%,land with 0-0.5% slope,GAEZ v5,06b
+gaez_slope_lt2_pct,cell,%,land under 2% slope,GAEZ v5,06b
+gaez_slope_mean_pct,cell,%,mean slope from slope classes,GAEZ v5,06b
+slope_srtm_mean_pct,cell,%,"mean slope of 30 m pixels (at the data's noise level, see 06b)",SRTM,06b
+slope_srtm_max_pct,cell,%,steepest 30 m pixel,SRTM,06b
+si_wheat,crop,0-100,"GAEZ suitability index, irrigated high input for wheat",GAEZ v5,06
+class_wheat,crop,class,"GAEZ suitability class, current cropland (1 = best) for wheat",GAEZ v5,06
+yield_wheat,crop,kg DW/ha,"GAEZ attainable yield, current cropland for wheat",GAEZ v5,06
+si_maize,crop,0-100,"GAEZ suitability index, irrigated high input for maize",GAEZ v5,06
+class_maize,crop,class,"GAEZ suitability class, current cropland (1 = best) for maize",GAEZ v5,06
+yield_maize,crop,kg DW/ha,"GAEZ attainable yield, current cropland for maize",GAEZ v5,06
+si_rice,crop,0-100,"GAEZ suitability index, irrigated high input for rice",GAEZ v5,06
+class_rice,crop,class,"GAEZ suitability class, current cropland (1 = best) for rice",GAEZ v5,06
+yield_rice,crop,kg DW/ha,"GAEZ attainable yield, current cropland for rice",GAEZ v5,06
+si_cotton,crop,0-100,"GAEZ suitability index, irrigated high input for cotton",GAEZ v5,06
+class_cotton,crop,class,"GAEZ suitability class, current cropland (1 = best) for cotton",GAEZ v5,06
+yield_cotton,crop,kg DW/ha,"GAEZ attainable yield, current cropland for cotton",GAEZ v5,06
+si_alfalfa,crop,0-100,"GAEZ suitability index, irrigated high input for alfalfa",GAEZ v5,06
+class_alfalfa,crop,class,"GAEZ suitability class, current cropland (1 = best) for alfalfa",GAEZ v5,06
+yield_alfalfa,crop,kg DW/ha,"GAEZ attainable yield, current cropland for alfalfa",GAEZ v5,06
+si_sugarbeet,crop,0-100,"GAEZ suitability index, irrigated high input for sugarbeet",GAEZ v5,06
+class_sugarbeet,crop,class,"GAEZ suitability class, current cropland (1 = best) for sugarbeet",GAEZ v5,06
+yield_sugarbeet,crop,kg DW/ha,"GAEZ attainable yield, current cropland for sugarbeet",GAEZ v5,06
+si_potato,crop,0-100,"GAEZ suitability index, irrigated high input for potato",GAEZ v5,06
+class_potato,crop,class,"GAEZ suitability class, current cropland (1 = best) for potato",GAEZ v5,06
+yield_potato,crop,kg DW/ha,"GAEZ attainable yield, current cropland for potato",GAEZ v5,06
+si_soybean,crop,0-100,"GAEZ suitability index, irrigated high input for soybean",GAEZ v5,06
+class_soybean,crop,class,"GAEZ suitability class, current cropland (1 = best) for soybean",GAEZ v5,06
+yield_soybean,crop,kg DW/ha,"GAEZ attainable yield, current cropland for soybean",GAEZ v5,06
+ndvi_m01,month,NDVI,"mean NDVI, 2017-2024 in month 1",Sentinel-2,08
+ndvi_m02,month,NDVI,"mean NDVI, 2017-2024 in month 2",Sentinel-2,08
+ndvi_m03,month,NDVI,"mean NDVI, 2017-2024 in month 3",Sentinel-2,08
+ndvi_m04,month,NDVI,"mean NDVI, 2017-2024 in month 4",Sentinel-2,08
+ndvi_m05,month,NDVI,"mean NDVI, 2017-2024 in month 5",Sentinel-2,08
+ndvi_m06,month,NDVI,"mean NDVI, 2017-2024 in month 6",Sentinel-2,08
+ndvi_m07,month,NDVI,"mean NDVI, 2017-2024 in month 7",Sentinel-2,08
+ndvi_m08,month,NDVI,"mean NDVI, 2017-2024 in month 8",Sentinel-2,08
+ndvi_m09,month,NDVI,"mean NDVI, 2017-2024 in month 9",Sentinel-2,08
+ndvi_m10,month,NDVI,"mean NDVI, 2017-2024 in month 10",Sentinel-2,08
+ndvi_m11,month,NDVI,"mean NDVI, 2017-2024 in month 11",Sentinel-2,08
+ndvi_m12,month,NDVI,"mean NDVI, 2017-2024 in month 12",Sentinel-2,08
+open_pct_m01,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 1",Sentinel-2,08
+open_pct_m02,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 2",Sentinel-2,08
+open_pct_m03,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 3",Sentinel-2,08
+open_pct_m04,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 4",Sentinel-2,08
+open_pct_m05,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 5",Sentinel-2,08
+open_pct_m06,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 6",Sentinel-2,08
+open_pct_m07,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 7",Sentinel-2,08
+open_pct_m08,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 8",Sentinel-2,08
+open_pct_m09,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 9",Sentinel-2,08
+open_pct_m10,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 10",Sentinel-2,08
+open_pct_m11,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 11",Sentinel-2,08
+open_pct_m12,month,%,"farmland with NDVI below 0.35, 2017-2024 in month 12",Sentinel-2,08
+rain_mm_m01,month,mm,"mean rain, 2016-2024 in month 1",GPM,08
+irrig_need_m01,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 1,SMAP,08
+t_max_c_m01,month,C,"mean daily maximum temperature, 2016-2024 in month 1",NASA POWER,08
+rain_mm_m02,month,mm,"mean rain, 2016-2024 in month 2",GPM,08
+irrig_need_m02,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 2,SMAP,08
+t_max_c_m02,month,C,"mean daily maximum temperature, 2016-2024 in month 2",NASA POWER,08
+rain_mm_m03,month,mm,"mean rain, 2016-2024 in month 3",GPM,08
+irrig_need_m03,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 3,SMAP,08
+t_max_c_m03,month,C,"mean daily maximum temperature, 2016-2024 in month 3",NASA POWER,08
+rain_mm_m04,month,mm,"mean rain, 2016-2024 in month 4",GPM,08
+irrig_need_m04,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 4,SMAP,08
+t_max_c_m04,month,C,"mean daily maximum temperature, 2016-2024 in month 4",NASA POWER,08
+rain_mm_m05,month,mm,"mean rain, 2016-2024 in month 5",GPM,08
+irrig_need_m05,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 5,SMAP,08
+t_max_c_m05,month,C,"mean daily maximum temperature, 2016-2024 in month 5",NASA POWER,08
+rain_mm_m06,month,mm,"mean rain, 2016-2024 in month 6",GPM,08
+irrig_need_m06,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 6,SMAP,08
+t_max_c_m06,month,C,"mean daily maximum temperature, 2016-2024 in month 6",NASA POWER,08
+rain_mm_m07,month,mm,"mean rain, 2016-2024 in month 7",GPM,08
+irrig_need_m07,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 7,SMAP,08
+t_max_c_m07,month,C,"mean daily maximum temperature, 2016-2024 in month 7",NASA POWER,08
+rain_mm_m08,month,mm,"mean rain, 2016-2024 in month 8",GPM,08
+irrig_need_m08,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 8,SMAP,08
+t_max_c_m08,month,C,"mean daily maximum temperature, 2016-2024 in month 8",NASA POWER,08
+rain_mm_m09,month,mm,"mean rain, 2016-2024 in month 9",GPM,08
+irrig_need_m09,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 9,SMAP,08
+t_max_c_m09,month,C,"mean daily maximum temperature, 2016-2024 in month 9",NASA POWER,08
+rain_mm_m10,month,mm,"mean rain, 2016-2024 in month 10",GPM,08
+irrig_need_m10,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 10,SMAP,08
+t_max_c_m10,month,C,"mean daily maximum temperature, 2016-2024 in month 10",NASA POWER,08
+rain_mm_m11,month,mm,"mean rain, 2016-2024 in month 11",GPM,08
+irrig_need_m11,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 11,SMAP,08
+t_max_c_m11,month,C,"mean daily maximum temperature, 2016-2024 in month 11",NASA POWER,08
+rain_mm_m12,month,mm,"mean rain, 2016-2024 in month 12",GPM,08
+irrig_need_m12,month,0-1,SMAP wilting fraction without irrigation (irrigation need) in month 12,SMAP,08
+t_max_c_m12,month,C,"mean daily maximum temperature, 2016-2024 in month 12",NASA POWER,08
+rain_mm_year,cell,mm,"mean annual rain, 2016-2024",GPM,08
+actual_share_pct_wheat,crop,%,"share of all irrigated harvested area, 2020 for wheat",GAEZ v5 actual,09
+actual_yield_t_ha_wheat,crop,t/ha,"real yield 2020, harvested product for wheat",GAEZ v5 actual,09
+season_wheat,crop,label,"winter / summer / all-year, from the GAEZ cycle for wheat",GAEZ v5,09
+actual_share_pct_maize,crop,%,"share of all irrigated harvested area, 2020 for maize",GAEZ v5 actual,09
+actual_yield_t_ha_maize,crop,t/ha,"real yield 2020, harvested product for maize",GAEZ v5 actual,09
+season_maize,crop,label,"winter / summer / all-year, from the GAEZ cycle for maize",GAEZ v5,09
+actual_share_pct_rice,crop,%,"share of all irrigated harvested area, 2020 for rice",GAEZ v5 actual,09
+actual_yield_t_ha_rice,crop,t/ha,"real yield 2020, harvested product for rice",GAEZ v5 actual,09
+season_rice,crop,label,"winter / summer / all-year, from the GAEZ cycle for rice",GAEZ v5,09
+actual_share_pct_cotton,crop,%,"share of all irrigated harvested area, 2020 for cotton",GAEZ v5 actual,09
+actual_yield_t_ha_cotton,crop,t/ha,"real yield 2020, harvested product for cotton",GAEZ v5 actual,09
+season_cotton,crop,label,"winter / summer / all-year, from the GAEZ cycle for cotton",GAEZ v5,09
+actual_share_pct_alfalfa,crop,%,"share of all irrigated harvested area, 2020 for alfalfa",GAEZ v5 actual,09
+actual_yield_t_ha_alfalfa,crop,t/ha,"real yield 2020, harvested product for alfalfa",GAEZ v5 actual,09
+season_alfalfa,crop,label,"winter / summer / all-year, from the GAEZ cycle for alfalfa",GAEZ v5,09
+actual_share_pct_sugarbeet,crop,%,"share of all irrigated harvested area, 2020 for sugarbeet",GAEZ v5 actual,09
+actual_yield_t_ha_sugarbeet,crop,t/ha,"real yield 2020, harvested product for sugarbeet",GAEZ v5 actual,09
+season_sugarbeet,crop,label,"winter / summer / all-year, from the GAEZ cycle for sugarbeet",GAEZ v5,09
+actual_share_pct_potato,crop,%,"share of all irrigated harvested area, 2020 for potato",GAEZ v5 actual,09
+actual_yield_t_ha_potato,crop,t/ha,"real yield 2020, harvested product for potato",GAEZ v5 actual,09
+season_potato,crop,label,"winter / summer / all-year, from the GAEZ cycle for potato",GAEZ v5,09
+actual_share_pct_soybean,crop,%,"share of all irrigated harvested area, 2020 for soybean",GAEZ v5 actual,09
+actual_yield_t_ha_soybean,crop,t/ha,"real yield 2020, harvested product for soybean",GAEZ v5 actual,09
+season_soybean,crop,label,"winter / summer / all-year, from the GAEZ cycle for soybean",GAEZ v5,09
