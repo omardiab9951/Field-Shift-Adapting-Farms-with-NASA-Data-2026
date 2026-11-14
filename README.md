@@ -67,6 +67,10 @@ The default uses equal weights. The score compares options. It is **not** a prob
 - `website-v2/backend/data/`: the four processed data tables and the manifest
 - `website-v2/backend/tests/`: automated tests (20 passing)
 
+## File structure
+
+[![Architecture diagram of mostafaai10/field-shift-adapting-farms-with-nasa-data-2026](https://gitdiagram.com/mostafaai10/field-shift-adapting-farms-with-nasa-data-2026/diagram.png)](https://gitdiagram.com/mostafaai10/field-shift-adapting-farms-with-nasa-data-2026?utm_source=readme&utm_medium=picture)
+
 ## Run it locally
 
 From the `website-v2/backend` folder:
