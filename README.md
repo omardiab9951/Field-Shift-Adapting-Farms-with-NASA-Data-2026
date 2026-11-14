@@ -97,3 +97,14 @@ Then open http://127.0.0.1:8000 in your browser. (On macOS or Linux, activate wi
 - **Omar, Fatma, Mostafa Nabil:** data work
 - **Ahmed:** demo website and scoring system
 - **Kareem:** testing, presentation, and video demo
+
+
+## Results
+
+### Criteria scores by rotation option
+
+![Criteria scores by rotation option](https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/raw/Final-Required-Files/figures/11_criteria_by_option.png)
+
+### Recommendation maps
+
+![Recommendation maps across the pilot area](https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/raw/Final-Required-Files/figures/11_recommendation_maps.png)
