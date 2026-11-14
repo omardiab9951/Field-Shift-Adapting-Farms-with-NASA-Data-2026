@@ -1,0 +1,56 @@
+{
+  "source_url": "https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026",
+  "source_branch": "Final-System",
+  "source_commit": "930ced44d013ac5760b38fee035fea9f5738b657",
+  "methodology_reference": "notebooks/11_scoring.ipynb",
+  "downloaded_at_utc": "2026-11-14",
+  "option_order": [
+    "wheat -> maize",
+    "wheat -> rice",
+    "wheat -> cotton",
+    "wheat -> soybean",
+    "sugarbeet -> maize",
+    "sugarbeet -> rice",
+    "sugarbeet -> cotton",
+    "sugarbeet -> soybean",
+    "potato -> maize",
+    "potato -> rice",
+    "potato -> cotton",
+    "potato -> soybean",
+    "alfalfa (all year)"
+  ],
+  "files": {
+    "master_cell.csv": {
+      "source_path": "data/processed/master_cell.csv",
+      "source_url": "https://raw.githubusercontent.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/930ced44d013ac5760b38fee035fea9f5738b657/data/processed/master_cell.csv",
+      "sha256": "89c49fa11fc673aaaaf2b4ce962587b975fd0f4fb7310db1408e5f4f032b6565",
+      "bytes": 1363189,
+      "rows": 560,
+      "columns": 189
+    },
+    "master_cell_dictionary.csv": {
+      "source_path": "data/processed/master_cell_dictionary.csv",
+      "source_url": "https://raw.githubusercontent.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/930ced44d013ac5760b38fee035fea9f5738b657/data/processed/master_cell_dictionary.csv",
+      "sha256": "8ac2949ad4954eb46689574fb5eb84c0bcbfa6d7298d51cede8599f8db0842e7",
+      "bytes": 15909,
+      "rows": 189,
+      "columns": 6
+    },
+    "scores_all.csv": {
+      "source_path": "data/processed/scores_all.csv",
+      "source_url": "https://raw.githubusercontent.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/930ced44d013ac5760b38fee035fea9f5738b657/data/processed/scores_all.csv",
+      "sha256": "b4f4da1185702356bc0490ece260eabe0e2632e2c8d37c69447a23a495a3fcc8",
+      "bytes": 2701867,
+      "rows": 7280,
+      "columns": 17
+    },
+    "recommendations.csv": {
+      "source_path": "data/processed/recommendations.csv",
+      "source_url": "https://raw.githubusercontent.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/930ced44d013ac5760b38fee035fea9f5738b657/data/processed/recommendations.csv",
+      "sha256": "1c36152c175f077fe5cff4899287a0f2cb78d82faeb34a88e0d6bebd729ea5fa",
+      "bytes": 516540,
+      "rows": 560,
+      "columns": 25
+    }
+  }
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Field Shift — the right crop for every field, from NASA data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,300..800&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+
+<header class="bar glass">
+  <a class="brand" href="#top"><span data-icon="wheat" data-size="20"></span>Field Shift</a>
+  <ol aria-label="Steps of the story">
+    <li><a href="#problem"><b>1</b><span>The problem</span></a></li>
+    <li><a href="#how"><b>2</b><span>What we did</span></a></li>
+    <li><a href="#try"><b>3</b><span>Try it</span></a></li>
+    <li><a href="#results"><b>4</b><span>Results</span></a></li>
+    <li><a href="#trust"><b>5</b><span>Why trust it</span></a></li>
+  </ol>
+</header>
+
+<main id="top">
+<section class="hero" aria-label="Introduction">
+  <canvas id="heroCanvas" aria-label="A 3D model of 560 farm fields in the Nile Delta. Crop rows grow, are harvested and grow again through the year, as measured by satellite."></canvas>
+  <div class="hero-copy">
+    <h1><span>The right crop for every field.</span><span class="headline-gold">Less water from the Nile.</span></h1>
+    <p>Field Shift turns NASA satellite data into one clear answer for every square kilometre of farmland in Egypt's Nile Delta.</p>
+    <div class="btns">
+      <a class="btn primary" href="#problem">See the story</a>
+      <a class="btn" href="#try">Try it on the map</a>
+      <a class="btn" href="./">Open the dashboard</a>
+    </div>
+  </div>
+  <div class="season glass" aria-live="polite">
+    <span class="m" id="monthName">January</span>
+    <button id="playBtn">Pause</button>
+    <span class="what" id="monthWhat">Winter crop is growing</span>
+    <span class="dots" id="dots" aria-hidden="true"></span>
+  </div>
+</section>
+
+<!-- 1 -->
+<section class="chapter" id="problem">
+  <div class="wrap">
+    <div class="ch-head"><span class="ch-num">1</span><div><h2>Two harvests a year. Almost no rain.</h2><p>Near Sidi Salem in Kafr El-Sheikh, farms live on Nile water. So every crop choice is also a water choice.</p></div></div>
+    <div class="problem">
+      <div class="facts">
+        <div class="fact glass"><span class="badge-ic bi-leaf" data-icon="wheat" data-size="30"></span><div class="n num">2 crops a year</div><p>One in winter, one in summer, on the same land.</p></div>
+        <div class="fact glass"><span class="badge-ic bi-nile" data-icon="cloud" data-size="30"></span><div class="n num">110 mm of rain</div><p>Almost all in winter. None from July to September.</p></div>
+        <div class="fact glass"><span class="badge-ic bi-gold" data-icon="drop" data-size="30"></span><div class="n num">~1,000 mm needed</div><p>The rest is Nile water, brought by canals.</p></div>
+      </div>
+      <div class="tubes glass" id="tubes">
+        <h3>Water for one year</h3>
+        <p>Rain fills a tenth of what the crops need. Changing the summer crop lowers the need.</p>
+        <div class="tube-row">
+          <div class="tube"><div class="t"><div class="w" id="tRain" class="water-fill"></div></div><b class="num" id="vRain">110 mm</b><span>Rain<br>gives</span></div>
+          <div class="tube"><div class="t"><div class="w" id="tRice" class="water-fill"></div></div><b class="num" id="vRice">1,027 mm</b><span>Wheat, then rice<br>needs</span></div>
+          <div class="tube"><div class="t"><div class="w" id="tSoy" class="gold-fill"></div></div><b class="num" id="vSoy" class="gold-text">848 mm</b><span>Wheat, then soybean<br>needs</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="chapter" id="how">
+  <div class="wrap">
+    <div class="ch-head"><span class="ch-num">2</span><div><h2>From orbit to an answer</h2><p>Three steps turn satellite pictures into advice a farmer can use.</p></div></div>
+    <div class="how" id="howGrid">
+      <div class="howcard glass">
+        <div class="art"><svg viewBox="0 0 260 150" aria-hidden="true">
+          <g fill="#0E2A33" opacity=".18"><circle cx="30" cy="24" r="1.2"/><circle cx="70" cy="50" r="1"/><circle cx="212" cy="30" r="1.2"/><circle cx="236" cy="66" r="1"/><circle cx="180" cy="16" r="1"/><circle cx="48" cy="78" r="1"/></g>
+          <circle cx="130" cy="250" r="140" fill="#CDE8C0" stroke="#3E9B3F" stroke-width="1.5"/>
+          <g stroke="#3E9B3F" stroke-width="1" opacity=".45" fill="none"><path d="M70 124l18 26M100 114l10 36M130 110v40M160 114l-10 36M190 124l-18 26"/><path d="M52 138c50-22 106-22 156 0"/></g>
+          <g class="sat-orbit">
+            <polygon points="130,56 110,112 150,112" fill="#1487A0" opacity=".22"/>
+            <g stroke="#0E2A33" stroke-width="1.6" fill="#FFFFFF" stroke-linejoin="round"><rect x="122" y="38" width="16" height="16" rx="2"/><rect x="96" y="41" width="22" height="10" rx="1.5" fill="#2A7FB0"/><rect x="142" y="41" width="22" height="10" rx="1.5" fill="#2A7FB0"/><path d="M118 46h4M138 46h4M107 41v10M153 41v10" fill="none"/></g>
+            <circle cx="130" cy="57" r="2.5" fill="#C98A12"/>
+          </g></svg></div>
+        <div class="txt"><div class="k">Step 1</div><h3>Look from space</h3><p>Every month for nine years: how green each field is, the rain, the soil moisture, the heat. Plus 40 years of Landsat.</p>
+          <div class="tags"><span class="tag">Landsat</span><span class="tag">Sentinel-2</span><span class="tag">GPM</span><span class="tag">SMAP</span><span class="tag">NASA POWER</span></div></div>
+      </div>
+      <div class="howcard glass">
+        <div class="art"><svg viewBox="0 0 260 150" aria-hidden="true">
+          <g class="layer l3"><polygon points="130,74 214,104 130,134 46,104" fill="#CDE8C0" stroke="#3E9B3F" stroke-width="1.5"/><g stroke="#3E9B3F" stroke-width="1" opacity=".5"><path d="M88 89l84 30M109 81.500l84 30M67 96.500l84 30M172 89l-84 30M151 81.500l-84 30M193 96.500l-84 30"/></g></g>
+          <g class="layer l2"><polygon points="130,48 214,78 130,108 46,78" fill="rgba(76,195,208,.28)" stroke="#1487A0" stroke-width="1.5"/></g>
+          <g class="layer"><polygon points="130,22 214,52 130,82 46,52" fill="rgba(240,197,106,.28)" stroke="#C98A12" stroke-width="1.5"/></g>
+          <g font-family="Atkinson Hyperlegible, sans-serif" font-size="11" fill="#4B6770"><text x="222" y="56">crops</text><text x="222" y="82">water</text><text x="222" y="108">fields</text></g></svg></div>
+        <div class="txt"><div class="k">Step 2</div><h3>Put it on one map</h3><p>We cut the area into 560 squares of 1 km. Every dataset goes into the same squares and months, then is checked against the others.</p>
+          <div class="tags"><span class="tag">560 squares</span><span class="tag">108 months</span><span class="tag">60,480 rows</span></div></div>
+      </div>
+      <div class="howcard glass">
+        <div class="art"><svg viewBox="0 0 260 150" aria-hidden="true">
+          <g font-family="Atkinson Hyperlegible, sans-serif" font-size="11" fill="#4B6770"><text x="22" y="42">Good land</text><text x="22" y="76">Less water</text><text x="22" y="110">Farmers grow it</text></g>
+          <rect class="gbar" x="22" y="48" width="112" height="9" rx="4.500" fill="#3E9B3F"/>
+          <rect class="gbar b2" x="22" y="82" width="84" height="9" rx="4.500" fill="#1487A0"/>
+          <rect class="gbar b3" x="22" y="116" width="120" height="9" rx="4.500" fill="#C98A12"/>
+          <path d="M156 84h22m-6-6l6 6-6 6" stroke="#4B6770" stroke-width="1.6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+          <g class="winner"><circle cx="216" cy="84" r="30" fill="rgba(240,197,106,.14)" stroke="#C98A12" stroke-width="1.6"/>
+            <g transform="translate(200 68) scale(1.33)" fill="none" stroke="#C98A12" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" data-icon-g="wheat"></g></g></svg></div>
+        <div class="txt"><div class="k">Step 3</div><h3>Score every crop pair</h3><p>Each square gets a score for 13 winter-and-summer crop pairs: good land, less water, and what farmers here already grow.</p>
+          <div class="tags"><span class="tag">FAO GAEZ v5</span><span class="tag">8 crops</span><span class="tag">13 pairs</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="chapter" id="try">
+  <div class="wrap">
+    <div class="ch-head"><span class="ch-num">3</span><div><h2>Pick a field. Get an answer.</h2><p>Each square is one kilometre of farmland. Click one to compare crop rotations and their modeled irrigation needs.</p></div></div>
+    <div class="try">
+      <div class="mapbox" id="mapbox">
+        <canvas id="exCanvas" tabindex="0" aria-label="3D map of the 560 fields. Click a square, or use the arrow keys, to choose a field."></canvas>
+        <div class="maptop">
+          <div class="seg glass" role="radiogroup" aria-label="What the map shows">
+            <button class="on" data-l="best" role="radio" aria-checked="true"><span data-icon="wheat" data-size="16"></span>Best crops</button>
+            <button data-l="water" role="radio" aria-checked="false"><span data-icon="drop" data-size="16"></span>Modeled water difference</button>
+            <button data-l="green" role="radio" aria-checked="false"><span data-icon="sprout" data-size="16"></span>How green</button>
+          </div>
+          <div class="zoom glass"><button id="zIn" aria-label="Zoom in">+</button><button id="zOut" aria-label="Zoom out">−</button><button id="zReset" aria-label="Reset view">⟲</button></div>
+        </div>
+        <div class="mapnote glass" id="mapnote"></div>
+        <div class="tip" id="tip"></div>
+      </div>
+      <div class="side">
+        <div class="prio glass">
+          <h3>What matters most to you?</h3>
+          <div class="choices" role="radiogroup" aria-label="Priority">
+            <button class="choice on" data-w="5,5,5"><span data-icon="scales" data-size="22"></span>Balanced</button>
+            <button class="choice" data-w="5,5,0"><span data-icon="drop" data-size="22"></span>Save water</button>
+            <button class="choice" data-w="10,0,0"><span data-icon="sprout" data-size="22"></span>Best land</button>
+            <button class="choice" data-w="0,0,10"><span data-icon="person" data-size="22"></span>Local habit</button>
+          </div>
+          <details class="fine"><summary>Fine-tune</summary>
+            <div class="slider"><label for="wLand">Good land</label><output id="oLand">33%</output><input id="wLand" type="range" min="0" max="10" value="5" class="land-range"></div>
+            <div class="slider"><label for="wWater">Less water</label><output id="oWater">33%</output><input id="wWater" type="range" min="0" max="10" value="5" class="water-range"></div>
+            <div class="slider"><label for="wPrac">What farmers grow</label><output id="oPrac">33%</output><input id="wPrac" type="range" min="0" max="10" value="5" class="practice-range"></div>
+          </details>
+          <p class="map-source" id="weightNotice" role="status"></p>
+          <p class="summary" id="summary"></p>
+        </div>
+      </div>
+      <div class="card glass" id="card" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="chapter" id="results">
+  <div class="wrap">
+    <div class="ch-head"><span class="ch-num">4</span><div><h2>What the fields told us</h2><p>Three results a farmer, a ministry and a water planner can use.</p></div></div>
+    <div class="results">
+      <div class="res glass">
+        <span class="badge-ic bi-nile" data-icon="drop" data-size="28"></span>
+        <div class="n num" class="nile-text">1,730 m³</div>
+        <div class="unit">of water saved per hectare, every year</div>
+        <h3>Grow soybean after wheat, not rice</h3>
+        <p>The land suits it almost as well, and the field needs much less water.</p>
+        <div class="foot"><div class="bigsave"><b class="num"><span id="totSave">83</span> million m³</b><span>a year if the whole pilot area switched</span></div></div>
+      </div>
+      <div class="res glass">
+        <span class="badge-ic bi-gold" data-icon="wheat" data-size="28"></span>
+        <div class="n num" class="gold-text">Wheat</div>
+        <div class="unit">is the safe winter crop almost everywhere</div>
+        <h3>Winter is settled. Summer is a choice.</h3>
+        <p>We tried 66 different priority settings. Here is how often the answer stayed the same.</p>
+        <div class="foot"><div class="duo" id="duo"></div></div>
+      </div>
+      <div class="res glass">
+        <span class="badge-ic bi-leaf" data-icon="trend" data-size="28"></span>
+        <div class="n num" class="leaf-text">40 years</div>
+        <div class="unit">of Landsat show the fields getting greener</div>
+        <h3>The land is not wearing out</h3>
+        <p>Only 4 of 560 squares are declining, and 3 of them are villages growing into fields.</p>
+        <div class="foot"><svg class="chart" id="chLandsat" viewBox="0 0 420 150" role="img" aria-label="Winter greenness from Landsat, 1985 to 2024"></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="chapter" id="trust">
+  <div class="wrap">
+    <div class="ch-head"><span class="ch-num">5</span><div><h2>Checked before we trusted it</h2><p>We tested our own data first, and we say openly what the tool cannot know.</p></div></div>
+    <div class="trust">
+      <div class="checks glass">
+        <h3>What we checked</h3>
+        <div class="check"><span class="ok" data-icon="check" data-size="16"></span><div><b>Two NASA missions agree</b><span>When GPM sees rain, SMAP sees the soil less dry the next month. Correlation −0.81.</span></div></div>
+        <div class="check"><span class="ok" data-icon="check" data-size="16"></span><div><b>Nothing lost in the merge</b><span>9 files became 60,480 rows. The few gaps in the FAO map are filled and flagged.</span></div></div>
+        <div class="check"><span class="ok" data-icon="check" data-size="16"></span><div><b>Trends are real, not luck</b><span>560 trend tests, corrected so that random noise is not called a trend.</span></div></div>
+        <div class="check"><span class="ok" data-icon="check" data-size="16"></span><div><b>This page matches our analysis</b><span>The field you pick is scored live by our backend, with the same data and formula as our notebooks. All 556 farm squares give the same first choice as notebook 11.</span></div></div>
+        <div class="check"><span class="ok w" data-icon="check" data-size="16"></span><div><b>We caught two data problems</b><span>FAO's model scores sugar beet as a summer crop, but here it grows in winter. And the elevation data shows slopes that are really trees and buildings. We did not let either one rank crops.</span></div></div>
+      </div>
+      <div class="limits glass">
+        <h3>What it cannot know</h3>
+        <ul>
+          <li><b>Prices and markets</b><span>"What farmers already grow" stands in for markets, mills and contracts.</span></li>
+          <li><b>Rice uses even more water</b><span>FAO's numbers leave out water lost from flooded paddies, so the real saving is bigger.</span></li>
+          <li><b>One square is many farms</b><span>The answer is a starting point for a visit and a soil test, not an order for one plot.</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="datafoot glass"><span data-icon="satellite" data-size="22"></span><b>Data</b><span>NASA: Landsat 5–9, GPM IMERG, SMAP L4, NASA POWER, SRTM</span><span>ESA: Sentinel-2</span><span>FAO / IIASA: GAEZ v5</span></div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>Field Shift, NASA Space Apps Challenge 2026: Adapting Farms with NASA Data.</span><span>Pilot area near Sidi Salem and Qallin, Kafr El-Sheikh, Egypt. Data 2016–2024; Landsat 1985–2024.</span></div></footer>
+
+
+
+
+
+<script defer src="./js/vendor/three.min.js"></script>
+<script defer src="./js/data.js"></script>
+<script defer src="./js/api.js"></script>
+<script defer src="./js/app.js"></script>
+</body>
+</html>

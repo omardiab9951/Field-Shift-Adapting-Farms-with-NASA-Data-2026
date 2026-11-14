@@ -1,0 +1,5 @@
+# The backend checks every data file against a pinned SHA-256 hash.
+# Keep these files byte-for-byte as committed, on every OS.
+backend/data/** -text
+# Windows batch files need CRLF line endings.
+*.bat text eol=crlf
