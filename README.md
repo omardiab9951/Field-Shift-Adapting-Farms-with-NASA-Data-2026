@@ -9,6 +9,8 @@ Field Shift is a bilingual (Arabic/English) decision-support website that helps 
 
 > Field Shift supports farmers' decisions. It does not replace local agricultural expertise.
 
+> **DEMO:** https://mostafa190-field-shift.hf.space/ .
+
 ---
 
 ## What it does
