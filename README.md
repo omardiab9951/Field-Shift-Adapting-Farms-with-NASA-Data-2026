@@ -1,6 +1,6 @@
 # Field Shift: Adapting Farms with NASA Data
 
-![image alt](https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/blob/17b446625acb3c8b04c8175fa2a064f5c001adb3/diagram.png)
+![image alt](https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/blob/cc47ed11f3388271e86b8cde74c16807afbbe611/Banner.png)
 
 **NASA Space Apps Challenge 2026, Cairo**
 **Challenge:** Field Shift: Adapting Farms with NASA Data
