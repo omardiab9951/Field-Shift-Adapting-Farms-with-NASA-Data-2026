@@ -6,3 +6,5 @@ data/raw/
 *.hgt
 *.zip
 .ipynb_checkpoints/
+*.bak
+*.bak2
