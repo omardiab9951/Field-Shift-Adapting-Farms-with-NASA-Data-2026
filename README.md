@@ -69,7 +69,7 @@ The default uses equal weights. The score compares options. It is **not** a prob
 
 ## File structure
 
-![image alt](https://github.com/MostafaAI10/OmniData-MCP/blob/750464122b76be8105a0e212e124aa1fd6ff4a50/MCP-Banner.png)
+![image alt](https://github.com/omardiab9951/Field-Shift-Adapting-Farms-with-NASA-Data-2026/blob/17b446625acb3c8b04c8175fa2a064f5c001adb3/diagram.png)
 
 [![Architecture diagram of mostafaai10/field-shift-adapting-farms-with-nasa-data-2026](https://gitdiagram.com/mostafaai10/field-shift-adapting-farms-with-nasa-data-2026/diagram.png)](https://gitdiagram.com/mostafaai10/field-shift-adapting-farms-with-nasa-data-2026?utm_source=readme&utm_medium=picture)
 
